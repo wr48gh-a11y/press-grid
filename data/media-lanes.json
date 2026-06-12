@@ -1,0 +1,261 @@
+{
+  "industries": [
+    { "id": "food-beverage", "label": "Food & beverage" },
+    { "id": "retail", "label": "Retail" },
+    { "id": "health-wellness", "label": "Health & wellness" },
+    { "id": "fitness", "label": "Fitness" },
+    { "id": "beauty", "label": "Beauty & personal care" },
+    { "id": "professional-services", "label": "Professional services" },
+    { "id": "home-services", "label": "Home services" },
+    { "id": "arts-entertainment", "label": "Arts & entertainment" },
+    { "id": "technology", "label": "Technology" },
+    { "id": "ai-design-tools", "label": "AI design tools" },
+    { "id": "education", "label": "Education & childcare" },
+    { "id": "nonprofit", "label": "Nonprofit & community" }
+  ],
+  "goals": [
+    { "id": "awareness", "label": "Awareness" },
+    { "id": "launch", "label": "Launch" },
+    { "id": "event", "label": "Event" },
+    { "id": "hiring", "label": "Hiring" },
+    { "id": "community", "label": "Community" },
+    { "id": "funding", "label": "Funding" },
+    { "id": "reputation", "label": "Reputation" }
+  ],
+  "lanes": [
+    {
+      "id": "local-business-reporter",
+      "lane": "Local business reporter",
+      "beat": "Openings, expansions, and the people behind {city}'s small-business economy",
+      "names": ["Marisol Vega", "Dana Whitfield", "Theo Brandt"],
+      "outlets": ["{city} Business Ledger", "{city} Commerce Journal"],
+      "baseScore": 74,
+      "goalWeights": { "awareness": 8, "launch": 16, "event": 3, "hiring": 12, "community": 5, "funding": 15, "reputation": 8 },
+      "industryWeights": { "default": 0, "technology": 4, "ai-design-tools": 5, "professional-services": 4, "retail": 3 },
+      "angles": {
+        "default": "How {businessName} fits into {city}'s changing small-business landscape",
+        "launch": "A new {industryLabel} bet on {city}: why {businessName} is opening now",
+        "funding": "What {businessName}'s new backing means for {industryLabel} in {city}",
+        "hiring": "{businessName} is adding jobs — what that signals about {city}'s economy"
+      },
+      "reason": "Covers what's opening and growing in {city}; {businessName}'s story is squarely on that beat.",
+      "back": {
+        "whyFits": "Local business reporters need a steady stream of opening, growth, and jobs stories with named owners. A {industryLabel} business in {city} with a concrete milestone is core inventory for this lane.",
+        "leadWith": "The business milestone and a number: square footage, jobs added, customers served, or dollars invested in {city}.",
+        "avoidLeading": "Your product's features or a generic 'we're passionate about quality' framing — this lane wants economics and people, not marketing copy.",
+        "proofNeeded": "A founder available for a 20-minute interview, one verifiable number, and a photo of the owner in the space.",
+        "coveragePattern": "Short business-section profiles, weekly 'what's opening' roundups, and quarterly local-economy trend pieces.",
+        "subjectLines": {
+          "default": "{city} story idea: {businessName} and where {industryLabel} is headed locally",
+          "launch": "Opening in {city}: {businessName} ({industryLabel}) — owner available this week",
+          "funding": "Local funding news: {businessName} in {city} — details and founder access"
+        },
+        "pitch": "Hi {firstName} — I run {businessName}, a {industryLabel} business in {city}, {state}. {storyHook} Happy to share numbers and make time for a quick interview if it's a fit for your beat.",
+        "followUp": "One follow-up after 4–5 business days; mention any new concrete detail rather than just bumping the thread."
+      }
+    },
+    {
+      "id": "community-news-editor",
+      "lane": "Community news editor",
+      "beat": "Neighborhood stories, local institutions, and the people who hold {city} together",
+      "names": ["Priya Raman", "Caleb Ostrowski", "June Albright"],
+      "outlets": ["The {city} Courier", "{city} Neighbors Weekly"],
+      "baseScore": 70,
+      "goalWeights": { "awareness": 9, "launch": 7, "event": 10, "hiring": 5, "community": 18, "funding": 4, "reputation": 10 },
+      "industryWeights": { "default": 0, "nonprofit": 8, "education": 5, "arts-entertainment": 3 },
+      "angles": {
+        "default": "{businessName} as a neighborhood fixture: the local story behind the storefront",
+        "community": "How {businessName} is showing up for {city} beyond the cash register",
+        "reputation": "The long game: how {businessName} earned its standing in {city}"
+      },
+      "reason": "Community editors look for stories where a business is a character in {city}'s neighborhood life, not just a commercial actor.",
+      "back": {
+        "whyFits": "This lane covers belonging, not commerce. If {businessName} touches a neighborhood ritual, a local cause, or a familiar corner of {city}, the editor has a frame for it.",
+        "leadWith": "The human or neighborhood element — a partnership, a tradition, a regular, a before-and-after of the block.",
+        "avoidLeading": "Revenue, growth plans, or anything that reads like a press release about the company itself.",
+        "proofNeeded": "A second voice (a neighbor, partner org, or longtime customer) willing to be quoted alongside you.",
+        "coveragePattern": "Warm weekly features, 'around the neighborhood' columns, and recurring local-institution profiles.",
+        "subjectLines": {
+          "default": "A {city} neighborhood story: {businessName}",
+          "community": "{businessName} + {city}: a community story with two voices ready to talk"
+        },
+        "pitch": "Hi {firstName} — {businessName} has been part of {city} life in a way I think fits your pages. {storyHook} I can connect you with neighbors and partners who are part of the story, not just me.",
+        "followUp": "One gentle follow-up after a week; community desks plan further ahead than daily news."
+      }
+    },
+    {
+      "id": "food-lifestyle-writer",
+      "lane": "Food and lifestyle writer",
+      "beat": "Where to eat, shop, and spend a Saturday in {city}",
+      "names": ["Renata Oyelaran", "Miles Tanaka", "Sofia Bramble"],
+      "outlets": ["{city} Taste & Style", "Weekend {city}"],
+      "baseScore": 62,
+      "goalWeights": { "awareness": 12, "launch": 14, "event": 8, "hiring": 0, "community": 6, "funding": 2, "reputation": 7 },
+      "industryWeights": { "default": 0, "food-beverage": 22, "retail": 10, "beauty": 9, "fitness": 5, "arts-entertainment": 6 },
+      "angles": {
+        "default": "The experience of {businessName}: what it's like to walk in the door in {city}",
+        "launch": "First look: what {businessName} is bringing to {city}'s {industryLabel} scene",
+        "awareness": "The {city} spot locals keep recommending: inside {businessName}"
+      },
+      "reason": "Lifestyle writers sell the experience of {city} to readers — if {businessName} is a place people can visit, taste, or try, it qualifies.",
+      "back": {
+        "whyFits": "This lane runs on sensory detail and 'worth your weekend' recommendations. A visitable {industryLabel} spot in {city} with a distinct point of view gives the writer material.",
+        "leadWith": "What a first-time visitor sees, tastes, or feels — your single most distinctive offering, named specifically.",
+        "avoidLeading": "Your business plan or backstory before the experience; this lane buys atmosphere first, biography second.",
+        "proofNeeded": "Three or four strong photos of the space and product, plus a standing invitation to visit unannounced.",
+        "coveragePattern": "First-look writeups, seasonal guides, and 'best of {city}' roundups assembled weeks in advance.",
+        "subjectLines": {
+          "default": "Worth a visit in {city}: {businessName}",
+          "launch": "First look invite: {businessName}, now open in {city}"
+        },
+        "pitch": "Hi {firstName} — {businessName} just might be a fit for your {city} coverage. {storyHook} Come by anytime, no staging; photos available if deadlines are tight.",
+        "followUp": "Follow up once after a week, ideally pegged to a season or upcoming guide they're likely assembling."
+      }
+    },
+    {
+      "id": "industry-trade-reporter",
+      "lane": "Industry trade reporter",
+      "beat": "Operators, trends, and playbooks across the {industryLabel} sector",
+      "names": ["Greta Folsom", "Desmond Okafor", "Howard Lin"],
+      "outlets": ["{industryLabel} Trade Signal", "The {industryLabel} Wire"],
+      "baseScore": 66,
+      "goalWeights": { "awareness": 6, "launch": 9, "event": 2, "hiring": 8, "community": 2, "funding": 16, "reputation": 12 },
+      "industryWeights": { "default": 0, "technology": 6, "ai-design-tools": 8, "professional-services": 4, "health-wellness": 4 },
+      "angles": {
+        "default": "What {businessName}'s approach says about where {industryLabel} is heading",
+        "funding": "An operator's view: how {businessName} put new capital to work",
+        "reputation": "Lessons from {city}: {businessName}'s playbook for {industryLabel} operators"
+      },
+      "reason": "Trade reporters want operators with a repeatable lesson — {businessName} can be the case study, with {city} as the backdrop.",
+      "back": {
+        "whyFits": "Trade outlets care about the 'how' other operators can copy. If {businessName} does one thing differently — pricing, staffing, sourcing, retention — that method is the story, not the business itself.",
+        "leadWith": "The specific operational decision and its measurable result; trades love a before/after metric.",
+        "avoidLeading": "Local color or community angles — this audience is national peers, not {city} readers.",
+        "proofNeeded": "One concrete metric you're willing to publish, and comfort being challenged on it by a knowledgeable reporter.",
+        "coveragePattern": "Operator Q&As, tactical how-we-did-it features, and trend pieces quoting three or four practitioners.",
+        "subjectLines": {
+          "default": "Operator story: how {businessName} approaches {industryLabel} differently",
+          "funding": "{industryLabel} operator on the record: what {businessName} did with new funding"
+        },
+        "pitch": "Hi {firstName} — I run {businessName} in {city}, {state}. {storyHook} I can walk through the numbers behind it and what I'd tell other {industryLabel} operators trying the same thing.",
+        "followUp": "Follow up after 5–7 days; offer yourself as a quotable source for their trend pieces even if this pitch doesn't land."
+      }
+    },
+    {
+      "id": "events-calendar-editor",
+      "lane": "Events calendar editor",
+      "beat": "What's happening in {city} this week — listings, openings, and things to do",
+      "names": ["Annie Castellano", "Marcus Plumb", "Lena Hartwig"],
+      "outlets": ["{city} Happenings", "This Week in {city}"],
+      "baseScore": 55,
+      "goalWeights": { "awareness": 6, "launch": 10, "event": 24, "hiring": 0, "community": 9, "funding": 0, "reputation": 2 },
+      "industryWeights": { "default": 0, "arts-entertainment": 8, "food-beverage": 5, "fitness": 4, "education": 4 },
+      "angles": {
+        "default": "{businessName}'s next public moment, packaged as a clean calendar listing",
+        "event": "{businessName}'s upcoming event as a ready-to-publish {city} listing",
+        "launch": "Opening day at {businessName} as a datable, listable {city} moment"
+      },
+      "reason": "Calendar editors publish anything public, datable, and open to {city} readers — the bar is logistics, not narrative.",
+      "back": {
+        "whyFits": "This is the most mechanical lane: if {businessName} has a public event with a date, time, place, and price, it gets listed. No persuasion required — just complete information.",
+        "leadWith": "The five facts in the first two lines: what, when, where, cost, and how to register or RSVP.",
+        "avoidLeading": "Your story or mission — calendar editors skim for logistics and discard anything that makes them hunt.",
+        "proofNeeded": "A finalized date and a public signup or info link; tentative events get skipped, not held.",
+        "coveragePattern": "Weekly listings compiled on a hard deadline, usually 7–10 days before publication.",
+        "subjectLines": {
+          "default": "Listing for {city} calendar: event at {businessName}",
+          "event": "{city} calendar submission: {businessName} — all details inside"
+        },
+        "pitch": "Hi {firstName} — submitting an event at {businessName} for your {city} calendar. {storyHook} Date, time, location, cost, and signup link are below in list form.",
+        "followUp": "Don't follow up on a single listing; resubmit the next event instead and become a reliable recurring source."
+      }
+    },
+    {
+      "id": "local-newsletter-writer",
+      "lane": "Local newsletter writer",
+      "beat": "The daily-ish email {city} actually reads: openings, oddities, and useful local intel",
+      "names": ["Becca Stein-Morrow", "Oliver Quint", "Tamsin Reed"],
+      "outlets": ["The {city} Brief", "{city} Morning Notes"],
+      "baseScore": 68,
+      "goalWeights": { "awareness": 14, "launch": 12, "event": 9, "hiring": 6, "community": 11, "funding": 5, "reputation": 6 },
+      "industryWeights": { "default": 0, "food-beverage": 6, "retail": 5, "arts-entertainment": 4 },
+      "angles": {
+        "default": "{businessName} as a two-paragraph item {city} readers forward to a friend",
+        "awareness": "The 'did you know this exists in {city}?' item, starring {businessName}",
+        "community": "A feel-good {city} item: {businessName} and the people around it"
+      },
+      "reason": "Newsletter writers need a fresh local item every single day — a tight, forwardable nugget about {businessName} is genuinely useful to them.",
+      "back": {
+        "whyFits": "Newsletters run on volume and voice. They can't visit everyone, so a pre-shaped item about {businessName} — short, specific, slightly surprising — slots straight into tomorrow's send.",
+        "leadWith": "The single most forwardable fact about {businessName}, written the way a friend would text it.",
+        "avoidLeading": "Long backstory or attachments; if the writer can't grasp the item in ten seconds, it dies in the inbox.",
+        "proofNeeded": "One crisp fact they can verify with a link or a phone call, and a photo that works small.",
+        "coveragePattern": "Daily or twice-weekly sends with 4–6 short items; quick turnaround, short shelf life, frequent reader-tip callouts.",
+        "subjectLines": {
+          "default": "Item for the {city} newsletter: {businessName}",
+          "awareness": "A {city} item your readers will forward: {businessName}"
+        },
+        "pitch": "Hi {firstName} — short one for the newsletter: {storyHook} That's {businessName} in {city}. Happy to confirm details by phone in five minutes if useful.",
+        "followUp": "Follow up after 3–4 days max — newsletter items go stale fast; offer a fresher angle if the first one aged out."
+      }
+    },
+    {
+      "id": "podcast-host",
+      "lane": "Podcast host",
+      "beat": "Long-form conversations with the people building things in and around {city}",
+      "names": ["Jordan Acevedo", "Faith Mbeki", "Sam Larkspur"],
+      "outlets": ["Made in {city} (podcast)", "{city} Storyfront (podcast)"],
+      "baseScore": 60,
+      "goalWeights": { "awareness": 10, "launch": 8, "event": 2, "hiring": 4, "community": 9, "funding": 9, "reputation": 16 },
+      "industryWeights": { "default": 0, "technology": 5, "ai-design-tools": 6, "nonprofit": 4, "arts-entertainment": 4 },
+      "angles": {
+        "default": "The founder conversation: what building {businessName} in {city} actually took",
+        "reputation": "{businessName}'s founder on the decisions they'd defend and the ones they'd redo",
+        "funding": "Money talk, honestly: {businessName}'s founder on raising and spending in {city}"
+      },
+      "reason": "Podcast hosts book guests, not stories — if the founder of {businessName} can talk candidly for 40 minutes, that's the product.",
+      "back": {
+        "whyFits": "This lane needs a person, not a press angle. A founder with opinions, a setback they'll discuss honestly, and a {city} connection gives the host an episode, not just a mention.",
+        "leadWith": "One tension or hard call from your story — hosts book guests who sound like they'll say something unexpected.",
+        "avoidLeading": "A polished company summary; if it sounds like a commercial, hosts assume the episode will too.",
+        "proofNeeded": "A previous talk, a voice memo, or three sharp bullet takes — anything proving you're listenable for 40 minutes.",
+        "coveragePattern": "Weekly or biweekly episodes booked 3–6 weeks out, with evergreen shelf life and show-notes links.",
+        "subjectLines": {
+          "default": "Guest idea: the founder of {businessName} ({city})",
+          "reputation": "A guest with opinions: {businessName}'s founder on {industryLabel}'s hard calls"
+        },
+        "pitch": "Hi {firstName} — I'm the founder of {businessName} in {city}, {state}. {storyHook} I'm happy to get into what went wrong along the way, not just the highlight reel. Three possible episode threads below.",
+        "followUp": "Follow up after two weeks; booking calendars are long, so a slow reply usually means 'queued,' not 'no.'"
+      }
+    },
+    {
+      "id": "regional-tv-producer",
+      "lane": "Regional TV producer",
+      "beat": "Morning-show segments and local features across {state}",
+      "names": ["Carmen Delacroix", "Pete Ashby", "Ingrid Sandoval"],
+      "outlets": ["{state} Today (regional TV)", "Good Morning {state}"],
+      "baseScore": 58,
+      "goalWeights": { "awareness": 11, "launch": 9, "event": 12, "hiring": 3, "community": 12, "funding": 3, "reputation": 7 },
+      "industryWeights": { "default": 0, "food-beverage": 7, "fitness": 6, "arts-entertainment": 6, "education": 4 },
+      "angles": {
+        "default": "A three-minute visual segment: {businessName} as a {state} morning-show moment",
+        "event": "Live-from-{city} potential: {businessName}'s event as a broadcast backdrop",
+        "community": "A {state} feel-good segment: {businessName} and its {city} neighbors"
+      },
+      "reason": "TV producers think in pictures — if something at {businessName} moves, demonstrates, or delights on camera, there's a segment in it.",
+      "back": {
+        "whyFits": "Television needs action the camera can follow. If {businessName} involves making, teaching, performing, or transforming something, a producer can storyboard it; if it's two people talking, they can't.",
+        "leadWith": "The visual: describe exactly what the camera would see in the first ten seconds of the segment.",
+        "avoidLeading": "Abstract claims about quality or service — if it can't be filmed, it can't lead a TV pitch.",
+        "proofNeeded": "A short phone video of the visual moment, plus flexibility for early-morning or live-window filming.",
+        "coveragePattern": "Recurring weekday segments planned days ahead, with last-minute slots when stories fall through.",
+        "subjectLines": {
+          "default": "Segment idea from {city}: {businessName} (strong visuals, flexible timing)",
+          "event": "Filmable {city} event: {businessName} — visuals and timing inside"
+        },
+        "pitch": "Hi {firstName} — segment idea from {city}: {storyHook} It's highly visual — I can send a 30-second phone clip so you can judge the pictures before committing.",
+        "followUp": "Follow up after 3–4 days and again the week of any event; producers triage daily, so timing matters more than persistence."
+      }
+    }
+  ]
+}

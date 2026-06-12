@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Grid — Synthetic media scout cards for local business stories</title>
+  <meta name="description" content="A prototype that turns a local business story into eight synthetic media scout cards, mapped across local media lanes." />
+  <!-- Empty favicon: keeps the prototype dependency-free without a 404. -->
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="landing-active">
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <!-- ================= Landing screen: full-screen hero ================= -->
+  <section class="landing" id="landing-screen" aria-label="Welcome">
+    <header class="site-nav">
+      <span class="nav-brand">The Press Grid</span>
+      <nav aria-label="Product sections (display only)">
+        <ul class="nav-links">
+          <li><span class="nav-link">How It Works</span></li>
+          <li><span class="nav-link">Scout Cards</span></li>
+          <li><span class="nav-link">Synthetic Data</span></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="landing-content">
+      <h1 class="landing-title">Welcome to Press Grid</h1>
+      <div class="hero-divider" aria-hidden="true"></div>
+      <p class="landing-dek">
+        Turn a local business story into a board of synthetic media scout
+        cards, each showing who might care, what angle to lead with, and
+        how to pitch it.
+      </p>
+
+      <ol class="landing-steps">
+        <li class="landing-step">
+          <span class="step-head">
+            <span class="step-num" aria-hidden="true">1</span>
+            <strong class="step-label">Frame the story</strong>
+          </span>
+          <span class="step-text">Set the business, market, and goal.</span>
+        </li>
+        <li class="landing-step">
+          <span class="step-head">
+            <span class="step-num" aria-hidden="true">2</span>
+            <strong class="step-label">Generate the board</strong>
+          </span>
+          <span class="step-text">Create eight scout cards, one for each media lane.</span>
+        </li>
+        <li class="landing-step">
+          <span class="step-head">
+            <span class="step-num" aria-hidden="true">3</span>
+            <strong class="step-label">Choose the pitch</strong>
+          </span>
+          <span class="step-text">Flip the strongest cards for angle, proof, and outreach guidance.</span>
+        </li>
+      </ol>
+
+      <button class="primary-btn landing-enter-btn" id="enter-btn" type="button">
+        Enter Press Grid
+      </button>
+    </div>
+
+    <p class="landing-footnote">
+      Demo only. Every reporter, outlet, and pitch detail is synthetic.
+      No real journalists, scraping, or email.
+    </p>
+  </section>
+
+  <!-- ================= Main tool ================= -->
+  <div class="tool" id="tool-screen" hidden>
+    <header class="site-nav">
+      <span class="nav-brand">The Press Grid</span>
+      <nav aria-label="Product sections (display only)">
+        <ul class="nav-links">
+          <li><span class="nav-link">How It Works</span></li>
+          <li><span class="nav-link">Scout Cards</span></li>
+          <li><span class="nav-link">Synthetic Data</span></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="grid-wrap">
+      <p class="results-status" id="results-status" role="status" aria-live="polite"></p>
+
+      <div class="press-grid" id="press-grid">
+        <!-- Start card: top-left anchor of the board. The scenario shown
+             here mirrors DEMO_SCENARIO in script.js — keep them in sync. -->
+        <section class="grid-cell grid-cell-start" aria-label="Demo scenario">
+          <div class="start-card">
+            <p class="start-card-label">Demo scenario</p>
+            <h2 class="start-card-business">Recraft AI</h2>
+            <p class="start-card-kicker">A sample story, ready to scout</p>
+
+            <dl class="scenario-list">
+              <div class="scenario-row">
+                <dt>Industry</dt>
+                <dd>AI design tools</dd>
+              </div>
+              <div class="scenario-row">
+                <dt>Market</dt>
+                <dd>San Francisco, CA</dd>
+              </div>
+              <div class="scenario-row">
+                <dt>Goal</dt>
+                <dd>Awareness</dd>
+              </div>
+            </dl>
+
+            <p class="scenario-story">
+              Expanding awareness for an AI design platform among creative
+              teams, designers, and marketing leaders.
+            </p>
+
+            <p class="scenario-note">
+              San Francisco is used as the sample U.S. market for this demo —
+              not a claim about where the company is headquartered.
+            </p>
+
+            <button class="primary-btn generate-btn" id="generate-btn" type="button">
+              Generate scout cards
+            </button>
+          </div>
+        </section>
+
+        <!-- Eight scout slots: layout-only wrappers, empty until generated.
+             Empty cells are hidden by CSS (.grid-cell:empty). -->
+        <div class="grid-cell" data-slot="0"></div>
+        <div class="grid-cell" data-slot="1"></div>
+        <div class="grid-cell" data-slot="2"></div>
+        <div class="grid-cell" data-slot="3"></div>
+        <div class="grid-cell" data-slot="4"></div>
+        <div class="grid-cell" data-slot="5"></div>
+        <div class="grid-cell" data-slot="6"></div>
+        <div class="grid-cell" data-slot="7"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Press Grid is a product prototype. Every reporter, outlet, and pitch detail is synthetic —
+        generated locally in your browser to illustrate how a story maps to media lanes.
+        Nothing is scraped, stored, or sent anywhere.
+      </p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
