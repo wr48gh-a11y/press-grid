@@ -6,7 +6,7 @@ generating fills the grid with eight "scout cards" — one per local media
 lane — showing who might plausibly care, why, and what a competent pitch to
 that lane looks like.
 
-**Live demo:** _coming soon_ <!-- placeholder: add deployed URL here -->
+**Live demo:** https://wr48gh-a11y.github.io/press-grid/
 
 ## How to run locally
 
